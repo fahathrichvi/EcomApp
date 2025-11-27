@@ -67,8 +67,7 @@ const Checkout = () => {
     setIsLoading(true)
 
     try {
-      const orderId = await createOrder(user.id, items, formData)
-      
+      await createOrder(user.id, items, formData)
 
       clearCart()
       toast.success('Order placed successfully!')

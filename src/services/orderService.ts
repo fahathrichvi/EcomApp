@@ -21,7 +21,7 @@ export const createOrder = async (
   }
 }
 
-export const getOrders = async (userId?: string): Promise<Order[]> => {
+export const getOrders = async (_userId?: string): Promise<Order[]> => {
   try {
     const response = await api.get('/orders')
     return response.data
@@ -30,7 +30,7 @@ export const getOrders = async (userId?: string): Promise<Order[]> => {
   }
 }
 
-export const getOrder = async (orderId: string): Promise<Order | null> => {
+export const getOrder = async (_orderId: string): Promise<Order | null> => {
   try {
     const response = await api.get(`/orders/${orderId}`)
     return response.data

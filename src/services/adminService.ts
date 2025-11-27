@@ -1,8 +1,5 @@
 import api from './api'
 import { User, AdminStats } from '../types'
-import { getProducts, getLowStockProducts } from './productService'
-import { getOrders } from './orderService'
-import { LOW_STOCK_THRESHOLD } from '../config/constants'
 
 export const getAllUsers = async (): Promise<User[]> => {
   try {

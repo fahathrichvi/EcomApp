@@ -18,12 +18,12 @@ export const getCategories = async (): Promise<Category[]> => {
 export const getCategory = async (categoryId: string): Promise<Category | null> => {
   try {
     const response = await api.get(`/categories/${categoryId}`)
-    const category = response.data
+    const categoryData = response.data
     return {
-      ...category,
-      image: category.image 
-        ? (category.image.startsWith('http') ? category.image : `http://localhost:3001${category.image}`)
-        : category.image,
+      ...categoryData,
+      image: categoryData.image 
+        ? (categoryData.image.startsWith('http') ? categoryData.image : `http://localhost:3001${categoryData.image}`)
+        : categoryData.image,
     }
   } catch (error: any) {
     if (error.response?.status === 404) return null
@@ -50,12 +50,12 @@ export const createCategory = async (
         'Content-Type': 'multipart/form-data',
       },
     })
-    const category = response.data
+    const createdCategory = response.data
     return {
-      ...category,
-      image: category.image 
-        ? (category.image.startsWith('http') ? category.image : `http://localhost:3001${category.image}`)
-        : category.image,
+      ...createdCategory,
+      image: createdCategory.image 
+        ? (createdCategory.image.startsWith('http') ? createdCategory.image : `http://localhost:3001${createdCategory.image}`)
+        : createdCategory.image,
     }
   } catch (error: any) {
     throw new Error(error.response?.data?.error || error.message || 'Failed to create category')

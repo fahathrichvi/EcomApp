@@ -4,11 +4,9 @@ import { getOrders } from '../../services/orderService'
 import { getProducts } from '../../services/productService'
 import { Order, Product } from '../../types'
 import { useAdmin } from '../../context/AdminContext'
-import { formatCurrency, calculateTax, isTaxEnabled } from '../../utils/helpers'
+import { formatCurrency } from '../../utils/helpers'
 import LoadingSpinner from '../../components/common/LoadingSpinner'
 import {
-  LineChart,
-  Line,
   BarChart,
   Bar,
   PieChart,
@@ -29,7 +27,6 @@ import {
   DollarSign,
   ShoppingBag,
   ArrowUpRight,
-  ArrowDownRight,
   Calendar,
 } from 'lucide-react'
 
@@ -370,7 +367,7 @@ const AdminSummary = () => {
                 className="text-gray-600 dark:text-gray-400"
                 style={{ fontSize: '12px' }}
                 tick={{ fill: 'currentColor' }}
-                tickFormatter={(value) => `$${value.toLocaleString()}`}
+                tickFormatter={(value: number) => `$${value.toLocaleString()}`}
               />
               <Tooltip
                 contentStyle={{
@@ -410,7 +407,7 @@ const AdminSummary = () => {
                 className="text-gray-600 dark:text-gray-400"
                 style={{ fontSize: '12px' }}
                 tick={{ fill: 'currentColor' }}
-                tickFormatter={(value) => `$${value.toLocaleString()}`}
+                tickFormatter={(value: number) => `$${value.toLocaleString()}`}
               />
               <Tooltip
                 contentStyle={{
@@ -443,7 +440,7 @@ const AdminSummary = () => {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                  label={({ name, percent }: { name: string; percent: number }) => `${name} ${(percent * 100).toFixed(0)}%`}
                   outerRadius={80}
                   fill="#8884d8"
                   dataKey="value"

@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { 
-  Settings as SettingsIcon, 
   Palette, 
   Store, 
   Truck, 
   CreditCard, 
   Search, 
-  Building2,
-  Package,
-  Globe
+  Building2
 } from 'lucide-react'
 import { useAuth } from '../../context/AuthContext'
 import GeneralSettings from '../../components/admin/GeneralSettings'

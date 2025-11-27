@@ -6,7 +6,7 @@ export const registerUser = async (
   email: string,
   password: string,
   displayName: string,
-  role: UserRole = USER_ROLES.CUSTOMER
+  _role: UserRole = USER_ROLES.CUSTOMER
 ): Promise<{ user: User; token: string }> => {
   try {
     const response = await api.post('/auth/register', {
