@@ -30,7 +30,7 @@ export const getOrders = async (_userId?: string): Promise<Order[]> => {
   }
 }
 
-export const getOrder = async (_orderId: string): Promise<Order | null> => {
+export const getOrder = async (orderId: string): Promise<Order | null> => {
   try {
     const response = await api.get(`/orders/${orderId}`)
     return response.data

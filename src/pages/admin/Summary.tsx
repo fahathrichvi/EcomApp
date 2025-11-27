@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Navigate } from 'react-router-dom'
 import { getOrders } from '../../services/orderService'
-import { getProducts } from '../../services/productService'
-import { Order, Product } from '../../types'
+import { Order } from '../../types'
 import { useAdmin } from '../../context/AdminContext'
 import { formatCurrency } from '../../utils/helpers'
 import LoadingSpinner from '../../components/common/LoadingSpinner'
@@ -49,7 +48,6 @@ const COLORS = ['#0ea5e9', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899'
 const AdminSummary = () => {
   const { hasPermission } = useAdmin()
   const [orders, setOrders] = useState<Order[]>([])
-  const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
   const [timeRange, setTimeRange] = useState<'7d' | '30d' | '90d' | '1y'>('30d')
 
@@ -61,12 +59,8 @@ const AdminSummary = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [ordersData, productsData] = await Promise.all([
-          getOrders(),
-          getProducts(),
-        ])
+        const ordersData = await getOrders()
         setOrders(ordersData)
-        setProducts(productsData.products)
       } catch (error) {
         console.error('Failed to fetch summary data:', error)
       } finally {
@@ -445,7 +439,7 @@ const AdminSummary = () => {
                   fill="#8884d8"
                   dataKey="value"
                 >
-                  {categoryRevenue.map((entry, index) => (
+                  {categoryRevenue.map((_entry, index) => (
                     <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                   ))}
                 </Pie>
