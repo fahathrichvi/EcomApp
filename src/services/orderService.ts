@@ -2,7 +2,7 @@ import api from './api'
 import { Order, CartItem, ShippingAddress, OrderStatus } from '../types'
 
 export const createOrder = async (
-  userId: string,
+  _userId: string,
   items: CartItem[],
   shippingAddress: ShippingAddress
 ): Promise<string> => {
