@@ -37,3 +37,6 @@ server/database.db-journal
 # Uploads
 server/uploads/*
 !server/uploads/.gitkeep
+
+.vercel
+.env*.local
