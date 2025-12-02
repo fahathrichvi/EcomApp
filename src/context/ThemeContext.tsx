@@ -7,11 +7,14 @@ interface ThemeContextType {
   toggleTheme: () => void
   primaryColor: string
   setPrimaryColor: (color: string) => void
+  fontColor: string
+  setFontColor: (color: string) => void
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 const DEFAULT_PRIMARY_COLOR = '#0284c7'
+const DEFAULT_FONT_COLOR = '#f9fafb'
 
 const applyPrimaryColorToCSSVars = (color: string) => {
   const root = window.document.documentElement
@@ -41,6 +44,11 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     return saved || DEFAULT_PRIMARY_COLOR
   })
 
+  const [fontColor, setFontColorState] = useState<string>(() => {
+    const saved = localStorage.getItem('dashboardFontColor')
+    return saved || DEFAULT_FONT_COLOR
+  })
+
   // Apply theme classes
   useEffect(() => {
     const root = window.document.documentElement
@@ -54,6 +62,12 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     applyPrimaryColorToCSSVars(primaryColor)
   }, [primaryColor])
 
+  // Apply font color CSS variable
+  useEffect(() => {
+    const root = window.document.documentElement
+    root.style.setProperty('--dashboard-font-color', fontColor)
+  }, [fontColor])
+
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
   }
@@ -64,8 +78,13 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     localStorage.setItem('primaryColor', color)
   }
 
+  const setFontColor = (color: string) => {
+    setFontColorState(color)
+    localStorage.setItem('dashboardFontColor', color)
+  }
+
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme, primaryColor, setPrimaryColor }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, primaryColor, setPrimaryColor, fontColor, setFontColor }}>
       {children}
     </ThemeContext.Provider>
   )
