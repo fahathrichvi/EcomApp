@@ -9,6 +9,7 @@
     --primary-600: #0284c7;
     --primary-700: #0284c7;
     --dashboard-font-color: #f9fafb;
+    --dashboard-bg-color: #020617;
     --tooltip-bg: #fff;
     --tooltip-border: #e5e7eb;
     --tooltip-text: #000;
@@ -79,6 +80,11 @@
   
   .card {
     @apply bg-white/95 dark:bg-gray-800/80 rounded-lg shadow-md dark:shadow-lg p-6 border border-gray-100 dark:border-gray-700/80;
+  }
+
+  /* Dashboard background color for admin layout */
+  .admin-root {
+    background-color: var(--dashboard-bg-color);
   }
 
   /* Use dashboard font color for text within admin layout */

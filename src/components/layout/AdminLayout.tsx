@@ -51,7 +51,7 @@ const AdminLayout = () => {
   })
 
   return (
-    <div className="admin-root min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+    <div className="admin-root min-h-screen transition-colors duration-200">
       <div className="flex">
         {/* Sidebar */}
         <aside className="w-64 bg-white dark:bg-gray-800 shadow-lg min-h-screen sticky top-0 transition-colors duration-200">

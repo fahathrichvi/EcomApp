@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
 import { Toaster } from 'react-hot-toast'
 import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
@@ -32,6 +33,20 @@ import AdminLayout from './components/layout/AdminLayout'
 import ProtectedRoute from './components/common/ProtectedRoute'
 
 function App() {
+  // Apply saved favicon (if any) on initial app load so it works on all pages/tabs
+  useEffect(() => {
+    const savedFavicon = localStorage.getItem('siteFavicon')
+    if (!savedFavicon) return
+
+    let link = document.querySelector("link[rel~='icon']") as HTMLLinkElement | null
+    if (!link) {
+      link = document.createElement('link')
+      link.rel = 'icon'
+      document.head.appendChild(link)
+    }
+    link.href = savedFavicon
+  }, [])
+
   return (
     <ThemeProvider>
       <Router>

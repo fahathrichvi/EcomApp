@@ -53,7 +53,16 @@ const CURRENCIES = [
 ]
 
 const GeneralSettings = ({ onClose }: GeneralSettingsProps) => {
-  const { theme, toggleTheme, primaryColor, setPrimaryColor, fontColor, setFontColor } = useTheme()
+  const {
+    theme,
+    toggleTheme,
+    primaryColor,
+    setPrimaryColor,
+    fontColor,
+    setFontColor,
+    backgroundColor,
+    setBackgroundColor,
+  } = useTheme()
   const [siteName, setSiteName] = useState('Vovia')
   const [siteDescription, setSiteDescription] = useState('Your trusted online shopping destination')
   const [logo, setLogo] = useState<string | null>(null)
@@ -239,6 +248,30 @@ const GeneralSettings = ({ onClose }: GeneralSettingsProps) => {
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
               This will update font colors used in the admin dashboard
+            </p>
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+              Dashboard Background Color
+            </label>
+            <div className="flex items-center space-x-3">
+              <input
+                type="color"
+                value={backgroundColor}
+                onChange={(e) => setBackgroundColor(e.target.value)}
+                className="h-10 w-20 rounded border border-gray-300 dark:border-gray-600 cursor-pointer"
+              />
+              <input
+                type="text"
+                value={backgroundColor}
+                onChange={(e) => setBackgroundColor(e.target.value)}
+                className="input flex-1"
+                placeholder="#020617"
+              />
+            </div>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              This will update the background color of the admin dashboard area
             </p>
           </div>
         </div>
