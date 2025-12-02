@@ -53,12 +53,11 @@ const CURRENCIES = [
 ]
 
 const GeneralSettings = ({ onClose }: GeneralSettingsProps) => {
-  const { theme, toggleTheme } = useTheme()
+  const { theme, toggleTheme, primaryColor, setPrimaryColor } = useTheme()
   const [siteName, setSiteName] = useState('Vovia')
   const [siteDescription, setSiteDescription] = useState('Your trusted online shopping destination')
   const [logo, setLogo] = useState<string | null>(null)
   const [favicon, setFavicon] = useState<string | null>(null)
-  const [primaryColor, setPrimaryColor] = useState('#0284c7')
   const [currency, setCurrency] = useState('USD')
   const [taxEnabled, setTaxEnabled] = useState(false)
   const [taxRate, setTaxRate] = useState(0)
