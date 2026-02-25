@@ -1,0 +1,957 @@
+{
+  "users": [
+    {
+      "id": "3729ae8d7a4449a918e36ecee28ad032",
+      "email": "cus1@shop.com",
+      "password_hash": "$2b$10$SNp7pEXqNlz40Zyk/nYAEO/hVQmhZD3zkg0OfxQa085.gNY6wYOUW",
+      "display_name": "Customer1",
+      "role": "customer",
+      "permissions": null,
+      "created_at": "2026-02-23T19:49:04.715Z",
+      "updated_at": "2026-02-23T19:49:14.996Z"
+    },
+    {
+      "id": "efefea84118832591a751f588853467c",
+      "email": "fahath@admin.com",
+      "password_hash": "$2b$10$A9TZAvtVYWKWhRXccnsto.6CdeHLpiXCYPIHDayPsKaFN7XcMjFnq",
+      "display_name": "Fr",
+      "role": "inventory_manager",
+      "permissions": "[\"products.view\",\"products.create\",\"products.edit\",\"products.delete\",\"analytics.view\"]",
+      "created_at": "2025-11-25T13:34:40.979Z",
+      "updated_at": "2025-11-25T16:32:44.318Z"
+    },
+    {
+      "id": "69c2dc75b12b71140b7973368bf028d2",
+      "email": "superadmin@shop.com",
+      "password_hash": "$2b$10$rbKwMjfIG9o9mHUX/v4VieTlT0x4od5Um7ZXki60d1pGIPuDB7X8y",
+      "display_name": "Super Admin",
+      "role": "super_admin",
+      "permissions": "[\"products.create\",\"products.edit\",\"products.delete\",\"orders.view\",\"orders.edit\",\"users.view\",\"users.create\",\"users.edit\",\"users.delete\",\"analytics.view\"]",
+      "created_at": "2025-11-25T01:12:18.601Z",
+      "updated_at": "2025-11-25T01:12:18.601Z"
+    },
+    {
+      "id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "email": "admin@shop.com",
+      "password_hash": "$2b$10$Z7CCzEeEOtjmHptoSXubAevg0AMfg4UzGV8CYkNvfwkKq/oxVO7Hu",
+      "display_name": "Admin",
+      "role": "admin",
+      "permissions": null,
+      "created_at": "2025-11-25T01:09:36.793Z",
+      "updated_at": "2025-11-25T01:09:36.793Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "034cce36984abafbaa013f340cf15d1c",
+      "name": "Monitors",
+      "description": "We have all types monitors",
+      "price": 20000,
+      "cost_price": 12000,
+      "expenses": null,
+      "stock": 20,
+      "category_id": "fa3bd66d3d372daf975e59e244949131",
+      "category": "computer accessories",
+      "images": "[\"/uploads/product-1764093200486-753692906.webp\"]",
+      "created_by": "69c2dc75b12b71140b7973368bf028d2",
+      "updated_by": "69c2dc75b12b71140b7973368bf028d2",
+      "created_at": "2025-11-25T14:43:29.322Z",
+      "updated_at": "2025-11-25T18:13:54.797Z",
+      "promotional_badge": "NEW ADDED"
+    },
+    {
+      "id": "4e0f32266c97c76a5e5f987d15936446",
+      "name": "Power Cable",
+      "description": "We have all kind of power cable",
+      "price": 300,
+      "stock": 197,
+      "category_id": "fa3bd66d3d372daf975e59e244949131",
+      "category": "computer accessories",
+      "images": "[\"/uploads/product-1764077350712-340679703.jpg\"]",
+      "created_by": "69c2dc75b12b71140b7973368bf028d2",
+      "updated_by": "69c2dc75b12b71140b7973368bf028d2",
+      "created_at": "2025-11-25T13:29:10.716Z",
+      "updated_at": "2025-11-25T13:57:21.500Z",
+      "cost_price": 210,
+      "expenses": null
+    },
+    {
+      "id": "cfca0dfa62666a59bdf7bd924ef1d06b",
+      "name": "Processor ",
+      "description": "We have All kind of Processor",
+      "price": 80000,
+      "stock": 19,
+      "category_id": "fa3bd66d3d372daf975e59e244949131",
+      "category": "computer accessories",
+      "images": "[\"/uploads/product-1764077312100-830297544.jpg\"]",
+      "created_by": "69c2dc75b12b71140b7973368bf028d2",
+      "updated_by": "69c2dc75b12b71140b7973368bf028d2",
+      "created_at": "2025-11-25T13:28:32.102Z",
+      "updated_at": "2025-12-18T14:18:55.507Z",
+      "cost_price": 58000,
+      "expenses": null,
+      "discount": null,
+      "promotional_badge": "10% OFF"
+    },
+    {
+      "id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "name": "GPU",
+      "description": "We have all kind of GPU",
+      "price": 50000,
+      "stock": 20,
+      "category_id": "fa3bd66d3d372daf975e59e244949131",
+      "category": "computer accessories",
+      "images": "[\"/uploads/product-1764077265142-971852197.jpg\"]",
+      "created_by": "69c2dc75b12b71140b7973368bf028d2",
+      "updated_by": "69c2dc75b12b71140b7973368bf028d2",
+      "created_at": "2025-11-25T13:27:45.146Z",
+      "updated_at": "2026-02-23T19:42:14.202Z",
+      "cost_price": 32000,
+      "expenses": 300,
+      "promotional_badge": "15% OFF",
+      "discount": 15
+    },
+    {
+      "id": "d5139b3bd1f51ca9dd9186f96c7adbb0",
+      "name": "RAM",
+      "description": "we have good quality Ram",
+      "price": 4000,
+      "stock": 48,
+      "category_id": "fa3bd66d3d372daf975e59e244949131",
+      "category": "computer accessories",
+      "images": "[\"/uploads/product-1764077213423-693454009.jpg\"]",
+      "created_by": "69c2dc75b12b71140b7973368bf028d2",
+      "updated_by": "69c2dc75b12b71140b7973368bf028d2",
+      "created_at": "2025-11-25T13:26:53.428Z",
+      "updated_at": "2025-11-25T13:58:07.251Z",
+      "cost_price": 3100,
+      "expenses": null
+    },
+    {
+      "id": "a9e2b77082fbf16c4d3d2ebbebf32209",
+      "name": "Power Supply ",
+      "description": "We have good Quality",
+      "price": 2000,
+      "stock": 50,
+      "category_id": "fa3bd66d3d372daf975e59e244949131",
+      "category": "computer accessories",
+      "images": "[\"/uploads/product-1764077164663-328545519.jpg\"]",
+      "created_by": "69c2dc75b12b71140b7973368bf028d2",
+      "updated_by": "69c2dc75b12b71140b7973368bf028d2",
+      "created_at": "2025-11-25T13:26:04.666Z",
+      "updated_at": "2025-11-25T13:58:29.175Z",
+      "cost_price": 800,
+      "expenses": null
+    },
+    {
+      "id": "81421cd03eaa1112d1cb101f2e3aed45",
+      "name": "Keyboard",
+      "description": "We have Good Product Quality",
+      "price": 800,
+      "stock": 60,
+      "category_id": "fa3bd66d3d372daf975e59e244949131",
+      "category": "computer accessories",
+      "images": "[\"/uploads/product-1764076754224-239999618.webp\"]",
+      "created_by": "69c2dc75b12b71140b7973368bf028d2",
+      "updated_by": "69c2dc75b12b71140b7973368bf028d2",
+      "created_at": "2025-11-25T13:19:14.231Z",
+      "updated_at": "2025-11-25T13:58:37.785Z",
+      "cost_price": 300,
+      "expenses": null
+    },
+    {
+      "id": "25d071a4b83a714df2c195a4f5a5534a",
+      "name": "Mouse",
+      "description": "We have Good quality mouse",
+      "price": 1200,
+      "stock": 98,
+      "category_id": "fa3bd66d3d372daf975e59e244949131",
+      "category": "computer accessories",
+      "images": "[\"/uploads/product-1764034529903-847781733.jpg\"]",
+      "created_by": "69c2dc75b12b71140b7973368bf028d2",
+      "updated_by": "69c2dc75b12b71140b7973368bf028d2",
+      "created_at": "2025-11-25T01:35:29.912Z",
+      "updated_at": "2025-11-25T13:58:52.891Z",
+      "cost_price": 400,
+      "expenses": null
+    }
+  ],
+  "categories": [
+    {
+      "id": "fa3bd66d3d372daf975e59e244949131",
+      "name": "computer accessories",
+      "description": null,
+      "image": "/uploads/category-1764094583426-746800753.jpg",
+      "created_at": "2025-11-25T01:34:54.330Z"
+    },
+    {
+      "id": "d7490315f6d932eb3a6bc9cacac152ca",
+      "name": "Laptops",
+      "description": null,
+      "image": null,
+      "created_at": "2025-12-02T14:57:19.006Z"
+    },
+    {
+      "id": "bc7ff458945070b495c764e9b4090508",
+      "name": "Mobiles",
+      "description": null,
+      "image": null,
+      "created_at": "2025-12-02T14:57:35.474Z"
+    },
+    {
+      "id": "69e7d5b679a9f2fcbc46dd3cf6d7fca7",
+      "name": "PC",
+      "description": null,
+      "image": null,
+      "created_at": "2025-12-02T14:57:26.178Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ab8df772f2441cde5453d86495b5f2d2",
+      "user_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "total": 8600,
+      "status": "delivered",
+      "shipping_address": "{\"fullName\":\"Customer1\",\"address\":\"jhjkhvj\",\"city\":\"ampara\",\"state\":\"bhjbn\",\"zipCode\":\"555255\",\"country\":\"Sri Lanka\",\"phone\":\"+94 750626071\"}",
+      "created_at": "2026-02-23T19:54:32.761Z",
+      "updated_at": "2026-02-23T19:57:33.664Z"
+    },
+    {
+      "id": "b49d1e9520541b5d7d1d6832d55c3465",
+      "user_id": "da4d03c68d258c8828adb9e74e38b785",
+      "total": 70000,
+      "status": "delivered",
+      "shipping_address": "{\"fullName\":\"Customer1\",\"address\":\"ghj\",\"city\":\"jhbb\",\"state\":\"hbjj\",\"zipCode\":\"5465\",\"country\":\"United States\",\"phone\":\"54135465446\"}",
+      "created_at": "2025-11-25T14:45:36.900Z",
+      "updated_at": "2025-12-18T14:19:43.233Z"
+    },
+    {
+      "id": "ffaf7730f07aed59124fa8f801207098",
+      "user_id": "da4d03c68d258c8828adb9e74e38b785",
+      "total": 110300,
+      "status": "delivered",
+      "shipping_address": "{\"fullName\":\"Customer1\",\"address\":\"gh\",\"city\":\"hkj\",\"state\":\"kjkj\",\"zipCode\":\"54165\",\"country\":\"United States\",\"phone\":\"64654654546\"}",
+      "created_at": "2025-11-25T13:31:22.338Z",
+      "updated_at": "2026-02-23T19:57:29.555Z"
+    },
+    {
+      "id": "0b38160194a7b536311811e78b540553",
+      "user_id": "142731bb96904ccc26116059f472fc48",
+      "total": 100,
+      "status": "delivered",
+      "shipping_address": "{\"fullName\":\"Customer1\",\"address\":\"demo add\",\"city\":\"demo\",\"state\":\"demo\",\"zipCode\":\"12545\",\"country\":\"United States\",\"phone\":\"7854212582552\"}",
+      "created_at": "2025-11-25T01:37:51.647Z",
+      "updated_at": "2025-11-25T13:33:04.671Z"
+    }
+  ],
+  "orderItems": [
+    {
+      "id": "0b7cc060547c814c037f012ce6d50bce",
+      "order_id": "0b38160194a7b536311811e78b540553",
+      "product_id": "25d071a4b83a714df2c195a4f5a5534a",
+      "quantity": 2,
+      "price": 50
+    },
+    {
+      "id": "577a8d4b92e16d4b9ecfaf4aa673a1e2",
+      "order_id": "ffaf7730f07aed59124fa8f801207098",
+      "product_id": "4e0f32266c97c76a5e5f987d15936446",
+      "quantity": 1,
+      "price": 300
+    },
+    {
+      "id": "9745fb6ac4c21cb7b64fca7a9c5129dc",
+      "order_id": "ffaf7730f07aed59124fa8f801207098",
+      "product_id": "cfca0dfa62666a59bdf7bd924ef1d06b",
+      "quantity": 1,
+      "price": 80000
+    },
+    {
+      "id": "1cf2b9c59c7216152a62d3c065711e65",
+      "order_id": "ffaf7730f07aed59124fa8f801207098",
+      "product_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "quantity": 1,
+      "price": 30000
+    },
+    {
+      "id": "9ac82d9c6c664bf56b725495fe447603",
+      "order_id": "b49d1e9520541b5d7d1d6832d55c3465",
+      "product_id": "034cce36984abafbaa013f340cf15d1c",
+      "quantity": 1,
+      "price": 20000
+    },
+    {
+      "id": "56b34d53a78af869e6625693085bc5d5",
+      "order_id": "b49d1e9520541b5d7d1d6832d55c3465",
+      "product_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "quantity": 1,
+      "price": 50000
+    },
+    {
+      "id": "0d48f4b7d73a9e1170d3edb1b177a500",
+      "order_id": "ab8df772f2441cde5453d86495b5f2d2",
+      "product_id": "4e0f32266c97c76a5e5f987d15936446",
+      "quantity": 2,
+      "price": 300
+    },
+    {
+      "id": "d8f9a251497fc25bb3ed6b3d9c55b405",
+      "order_id": "ab8df772f2441cde5453d86495b5f2d2",
+      "product_id": "d5139b3bd1f51ca9dd9186f96c7adbb0",
+      "quantity": 2,
+      "price": 4000
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "386021a25a61d7b24cab593eadccd90d",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "034cce36984abafbaa013f340cf15d1c",
+      "details": "{\"name\":\"Monitors\",\"price\":20000,\"stock\":20}",
+      "timestamp": "2025-11-25T14:53:33.119Z"
+    },
+    {
+      "id": "94a5a1c3fc52fe4e8b5ec8561a1cefa2",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-11-25T14:58:59.638Z"
+    },
+    {
+      "id": "e6628ab83ee6cb64ee73929a6d2302d7",
+      "user_id": "efefea84118832591a751f588853467c",
+      "user_email": "fahath@admin.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "efefea84118832591a751f588853467c",
+      "details": "{\"email\":\"fahath@admin.com\",\"role\":\"inventory_manager\"}",
+      "timestamp": "2025-11-25T15:00:39.816Z"
+    },
+    {
+      "id": "325314d7ef478cdfc3d3406ff361c3e3",
+      "user_id": "efefea84118832591a751f588853467c",
+      "user_email": "fahath@admin.com",
+      "action": "update",
+      "resource": "user_profile",
+      "resource_id": "efefea84118832591a751f588853467c",
+      "details": "{\"displayName\":\"Fr\"}",
+      "timestamp": "2025-11-25T16:32:44.320Z"
+    },
+    {
+      "id": "863e6ebe90bce2fdfbed2939e8d7dba4",
+      "user_id": "efefea84118832591a751f588853467c",
+      "user_email": "fahath@admin.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "efefea84118832591a751f588853467c",
+      "details": "{\"email\":\"fahath@admin.com\",\"role\":\"inventory_manager\"}",
+      "timestamp": "2025-11-25T16:33:09.730Z"
+    },
+    {
+      "id": "68ec89fb957b48b0c54c143e5583b93f",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-11-25T16:34:30.148Z"
+    },
+    {
+      "id": "d26bef27a568bea1a98b7b43fbdcb597",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-11-25T17:50:16.310Z"
+    },
+    {
+      "id": "cf925af551f76aaef2c0d77dad972a05",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-11-25T17:52:15.296Z"
+    },
+    {
+      "id": "a4419331e9d2413fba4d744776d31e71",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "034cce36984abafbaa013f340cf15d1c",
+      "details": "{\"name\":\"Monitors\",\"price\":20000,\"stock\":20}",
+      "timestamp": "2025-11-25T17:53:20.494Z"
+    },
+    {
+      "id": "cd9656fb3f5d3323bed3270dec897dbb",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-11-25T18:13:11.114Z"
+    },
+    {
+      "id": "2e8b2d429541d9474f7bcc605dfb317d",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "034cce36984abafbaa013f340cf15d1c",
+      "details": "{\"name\":\"Monitors\",\"price\":20000,\"stock\":20}",
+      "timestamp": "2025-11-25T18:13:54.799Z"
+    },
+    {
+      "id": "2f6954b8201840e75e2c3b7b24500c93",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "category",
+      "resource_id": "fa3bd66d3d372daf975e59e244949131",
+      "details": "{\"name\":\"computer accessories\"}",
+      "timestamp": "2025-11-25T18:14:38.126Z"
+    },
+    {
+      "id": "7dc56e683052075e45175881ae8fb670",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-11-25T18:15:02.726Z"
+    },
+    {
+      "id": "3bda46218e0761cb61b972730b77eb5d",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "category",
+      "resource_id": "fa3bd66d3d372daf975e59e244949131",
+      "details": "{\"name\":\"computer accessories\"}",
+      "timestamp": "2025-11-25T18:16:11.221Z"
+    },
+    {
+      "id": "95d9ab56bf0d12854e5c77e1fb6fda19",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "category",
+      "resource_id": "fa3bd66d3d372daf975e59e244949131",
+      "details": "{\"name\":\"computer accessories\"}",
+      "timestamp": "2025-11-25T18:16:15.984Z"
+    },
+    {
+      "id": "a5fda4a34f61f6c3bf8b057c772958b7",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "category",
+      "resource_id": "fa3bd66d3d372daf975e59e244949131",
+      "details": "{\"name\":\"computer accessories\"}",
+      "timestamp": "2025-11-25T18:16:23.430Z"
+    },
+    {
+      "id": "f76d6cdac8588e77b8728ba1b571f163",
+      "user_id": "da4d03c68d258c8828adb9e74e38b785",
+      "user_email": "cus1@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "da4d03c68d258c8828adb9e74e38b785",
+      "details": "{\"email\":\"cus1@shop.com\",\"role\":\"customer\"}",
+      "timestamp": "2025-11-25T18:46:38.285Z"
+    },
+    {
+      "id": "79eb56b6d81cf01e1d79c17547e8042c",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-11-25T19:21:20.098Z"
+    },
+    {
+      "id": "7731134e4f8296ab481720c1308d99b6",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":8}",
+      "timestamp": "2025-11-25T19:23:16.787Z"
+    },
+    {
+      "id": "2d008b90103b5b35137bc115b2c4be1b",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-11-25T19:29:31.908Z"
+    },
+    {
+      "id": "d64c02a7d4016c7480a19949d188875b",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":8}",
+      "timestamp": "2025-11-25T19:30:11.701Z"
+    },
+    {
+      "id": "570a2fd518de7d4fec346dd95e6d8983",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "details": "{\"email\":\"admin@shop.com\",\"role\":\"admin\"}",
+      "timestamp": "2025-11-25T19:31:43.675Z"
+    },
+    {
+      "id": "9a8005b617b3cdc3a91e436a3a23d6d8",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":8}",
+      "timestamp": "2025-11-25T19:35:54.457Z"
+    },
+    {
+      "id": "1b243fd1260b94685c0230366de928fa",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":8}",
+      "timestamp": "2025-11-25T19:36:21.667Z"
+    },
+    {
+      "id": "35aa4f170bad1685a3d38ddd345e341a",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "details": "{\"email\":\"admin@shop.com\",\"role\":\"admin\"}",
+      "timestamp": "2025-11-25T19:37:13.740Z"
+    },
+    {
+      "id": "9593beb33e043d4944507b9708d29b65",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":8}",
+      "timestamp": "2025-11-25T19:37:50.107Z"
+    },
+    {
+      "id": "50a4a6da24586912ef1f3252b6668ffe",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":8}",
+      "timestamp": "2025-11-25T19:41:40.709Z"
+    },
+    {
+      "id": "2846bd75b27dd59255fd394cb8853fa6",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":8}",
+      "timestamp": "2025-11-25T19:41:47.597Z"
+    },
+    {
+      "id": "b14a94727cf1b4049bce31c37525210a",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "details": "{\"email\":\"admin@shop.com\",\"role\":\"admin\"}",
+      "timestamp": "2025-11-25T19:43:23.287Z"
+    },
+    {
+      "id": "e576c77478512e088a47550fc61750e9",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":8}",
+      "timestamp": "2025-11-25T19:43:36.128Z"
+    },
+    {
+      "id": "a549152b8e6578edcca61a7aa7de6469",
+      "user_id": "46beb0e1a68a4bf69077d7cb1f966b30",
+      "user_email": "admin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":8}",
+      "timestamp": "2025-11-25T19:43:49.634Z"
+    },
+    {
+      "id": "47ca6aa987e1d4f799eba3b47932132d",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-12-02T14:52:35.730Z"
+    },
+    {
+      "id": "414932e85dff4ccbb973d192e4b46684",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-12-02T14:56:10.858Z"
+    },
+    {
+      "id": "532ab5360eb4299acdbbaa7b1db1511f",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "create",
+      "resource": "category",
+      "resource_id": "d7490315f6d932eb3a6bc9cacac152ca",
+      "details": "{\"name\":\"Laptops\"}",
+      "timestamp": "2025-12-02T14:57:19.007Z"
+    },
+    {
+      "id": "e0b271d8fc3da90dd0100771415139f5",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "create",
+      "resource": "category",
+      "resource_id": "69e7d5b679a9f2fcbc46dd3cf6d7fca7",
+      "details": "{\"name\":\"PC\"}",
+      "timestamp": "2025-12-02T14:57:26.180Z"
+    },
+    {
+      "id": "9bb1e2f4cb05e128c210664a014f8477",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "create",
+      "resource": "category",
+      "resource_id": "bc7ff458945070b495c764e9b4090508",
+      "details": "{\"name\":\"Mobiles\"}",
+      "timestamp": "2025-12-02T14:57:35.475Z"
+    },
+    {
+      "id": "010dbeeb4a13e4831676662a80304096",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-12-18T14:16:08.308Z"
+    },
+    {
+      "id": "b8beec1ddb6714bc36f3f3e838cacd7a",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":20}",
+      "timestamp": "2025-12-18T14:17:41.349Z"
+    },
+    {
+      "id": "84570a71dedf73d05d1f685234fb128d",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "cfca0dfa62666a59bdf7bd924ef1d06b",
+      "details": "{\"name\":\"Processor \",\"price\":80000,\"stock\":19}",
+      "timestamp": "2025-12-18T14:18:55.508Z"
+    },
+    {
+      "id": "8028996a8442a5568e8ba31a98a008dc",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "order",
+      "resource_id": "b49d1e9520541b5d7d1d6832d55c3465",
+      "details": "{\"status\":\"shipped\",\"previousStatus\":\"pending\"}",
+      "timestamp": "2025-12-18T14:19:37.361Z"
+    },
+    {
+      "id": "ac69e34e8199dfc1e54831f3a1a85360",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "order",
+      "resource_id": "b49d1e9520541b5d7d1d6832d55c3465",
+      "details": "{\"status\":\"delivered\",\"previousStatus\":\"shipped\"}",
+      "timestamp": "2025-12-18T14:19:43.234Z"
+    },
+    {
+      "id": "d30d6410121e61bc52f3095e6798b088",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-12-18T14:24:26.965Z"
+    },
+    {
+      "id": "4c2d2b01d8a6857f6dc80d655697c644",
+      "user_id": "1dc341fa5611385e01f098e57ccce4b9",
+      "user_email": "cus2@shop.com",
+      "action": "register",
+      "resource": "user",
+      "resource_id": "1dc341fa5611385e01f098e57ccce4b9",
+      "details": "{\"email\":\"cus2@shop.com\",\"displayName\":\"Customer2\",\"role\":\"customer\"}",
+      "timestamp": "2025-12-18T14:25:10.260Z"
+    },
+    {
+      "id": "a42ab40cb4483a0d9ed1cf545ba9b56f",
+      "user_id": "1dc341fa5611385e01f098e57ccce4b9",
+      "user_email": "cus2@shop.com",
+      "action": "update",
+      "resource": "user_profile",
+      "resource_id": "1dc341fa5611385e01f098e57ccce4b9",
+      "details": "{\"displayName\":\"Customer2\"}",
+      "timestamp": "2025-12-18T14:25:17.979Z"
+    },
+    {
+      "id": "7d7d36ae0289e4f0446351a2ac26e281",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2025-12-18T14:26:10.132Z"
+    },
+    {
+      "id": "f04a3435d868b94eaf6f41294d73decf",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "delete",
+      "resource": "user",
+      "resource_id": "1dc341fa5611385e01f098e57ccce4b9",
+      "details": "{\"email\":\"cus2@shop.com\",\"displayName\":\"Customer2\"}",
+      "timestamp": "2025-12-18T14:26:28.308Z"
+    },
+    {
+      "id": "3b361561343023e5612ccaf77671b1cb",
+      "user_id": "da4d03c68d258c8828adb9e74e38b785",
+      "user_email": "cus1@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "da4d03c68d258c8828adb9e74e38b785",
+      "details": "{\"email\":\"cus1@shop.com\",\"role\":\"customer\"}",
+      "timestamp": "2025-12-18T14:27:04.958Z"
+    },
+    {
+      "id": "a1e1e93afcda32a4e4beebc241b07c1c",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2026-02-23T19:38:55.531Z"
+    },
+    {
+      "id": "9c100f2fb1c58ed166d99b5da9e12436",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "order",
+      "resource_id": "ffaf7730f07aed59124fa8f801207098",
+      "details": "{\"status\":\"shipped\",\"previousStatus\":\"processing\"}",
+      "timestamp": "2026-02-23T19:39:24.388Z"
+    },
+    {
+      "id": "a5388046acd0f68fe70f6931f99ca9b8",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "order",
+      "resource_id": "ffaf7730f07aed59124fa8f801207098",
+      "details": "{\"status\":\"cancelled\",\"previousStatus\":\"shipped\"}",
+      "timestamp": "2026-02-23T19:39:37.270Z"
+    },
+    {
+      "id": "d2aadbbb519c45fa3e1812f3ce63155e",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "order",
+      "resource_id": "ffaf7730f07aed59124fa8f801207098",
+      "details": "{\"status\":\"shipped\",\"previousStatus\":\"cancelled\"}",
+      "timestamp": "2026-02-23T19:39:41.005Z"
+    },
+    {
+      "id": "a5f26eef73ca97fe700c5fcba9d2597d",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":20}",
+      "timestamp": "2026-02-23T19:41:31.627Z"
+    },
+    {
+      "id": "fed6338b74b30ad899cb2cf338ad0987",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "product",
+      "resource_id": "2ef8d00f4e3e0896c1e0fac8f7250a84",
+      "details": "{\"name\":\"GPU\",\"price\":50000,\"stock\":20}",
+      "timestamp": "2026-02-23T19:42:14.202Z"
+    },
+    {
+      "id": "d74da854e3a9161e253688605cee019a",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "delete",
+      "resource": "user",
+      "resource_id": "da4d03c68d258c8828adb9e74e38b785",
+      "details": "{\"email\":\"cus1@shop.com\",\"displayName\":\"Customer1\"}",
+      "timestamp": "2026-02-23T19:48:02.106Z"
+    },
+    {
+      "id": "c90ee648802547c718dedfab3b42f337",
+      "user_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "user_email": "cus1@shop.com",
+      "action": "register",
+      "resource": "user",
+      "resource_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "details": "{\"email\":\"cus1@shop.com\",\"displayName\":\"Customer1\",\"role\":\"customer\"}",
+      "timestamp": "2026-02-23T19:49:04.716Z"
+    },
+    {
+      "id": "e70d50692c1c02efed0df5b4e067a536",
+      "user_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "user_email": "cus1@shop.com",
+      "action": "update",
+      "resource": "user_profile",
+      "resource_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "details": "{\"displayName\":\"Customer1\"}",
+      "timestamp": "2026-02-23T19:49:14.997Z"
+    },
+    {
+      "id": "58b3010cdfd8e55a9a19970b675d7cf7",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2026-02-23T19:51:50.873Z"
+    },
+    {
+      "id": "a78de02505141ccaebc352fbb60971fe",
+      "user_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "user_email": "cus1@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "details": "{\"email\":\"cus1@shop.com\",\"role\":\"customer\"}",
+      "timestamp": "2026-02-23T19:52:41.437Z"
+    },
+    {
+      "id": "f993f3652b61a96967e78f758f0206b8",
+      "user_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "user_email": "cus1@shop.com",
+      "action": "create",
+      "resource": "order",
+      "resource_id": "ab8df772f2441cde5453d86495b5f2d2",
+      "details": "{\"total\":8600,\"itemCount\":2}",
+      "timestamp": "2026-02-23T19:54:32.763Z"
+    },
+    {
+      "id": "e196bf4b8b66687ad229592cdb1ae286",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2026-02-23T19:55:57.324Z"
+    },
+    {
+      "id": "13a6b5a486d2744947ec8c3b8550e46c",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "order",
+      "resource_id": "ab8df772f2441cde5453d86495b5f2d2",
+      "details": "{\"status\":\"processing\",\"previousStatus\":\"pending\"}",
+      "timestamp": "2026-02-23T19:56:05.964Z"
+    },
+    {
+      "id": "fb60db895b09f4f78a84865978a68925",
+      "user_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "user_email": "cus1@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "3729ae8d7a4449a918e36ecee28ad032",
+      "details": "{\"email\":\"cus1@shop.com\",\"role\":\"customer\"}",
+      "timestamp": "2026-02-23T19:56:24.357Z"
+    },
+    {
+      "id": "aefea7f85891f70a1b990ae97b12297a",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "login",
+      "resource": "auth",
+      "resource_id": "69c2dc75b12b71140b7973368bf028d2",
+      "details": "{\"email\":\"superadmin@shop.com\",\"role\":\"super_admin\"}",
+      "timestamp": "2026-02-23T19:57:15.187Z"
+    },
+    {
+      "id": "07aee26a2aa02151357c4d7f3039111b",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "order",
+      "resource_id": "ffaf7730f07aed59124fa8f801207098",
+      "details": "{\"status\":\"delivered\",\"previousStatus\":\"shipped\"}",
+      "timestamp": "2026-02-23T19:57:29.557Z"
+    },
+    {
+      "id": "99f28b512353d7effcd5ad02afc2abb8",
+      "user_id": "69c2dc75b12b71140b7973368bf028d2",
+      "user_email": "superadmin@shop.com",
+      "action": "update",
+      "resource": "order",
+      "resource_id": "ab8df772f2441cde5453d86495b5f2d2",
+      "details": "{\"status\":\"delivered\",\"previousStatus\":\"processing\"}",
+      "timestamp": "2026-02-23T19:57:33.665Z"
+    }
+  ]
+}
